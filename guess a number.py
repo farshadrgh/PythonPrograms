@@ -5,6 +5,11 @@ print("Welcome to Number Guess")
 
 while guessCheck == "wrong":
 	response=int(input("Please input a number between 0 and 100:"))
+
+	if response > 100 or response < 0:
+		print("Wrong number!(between 0 and 100)")
+		print(response)
+
 	if response < number:
 		print("This is lower than actual number. Please try again.")
 	elif response > number:
