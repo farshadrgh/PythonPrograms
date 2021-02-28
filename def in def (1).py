@@ -4,5 +4,3 @@ def greet ():
         print("hello {}".format(name))
     hello()
 greet()
-
-print(greet())
