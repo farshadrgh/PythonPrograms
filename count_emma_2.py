@@ -1,3 +1,6 @@
-sampleStr = "Emma is good developer. Emma is a writer"
-cnt = sampleStr.lower().count("emma")
-print(cnt)
+def counting(OurString):
+   cnt = OurString.lower().count("emma")
+   print(cnt)
+
+String = "Emma is good developer. Emma is a writer"
+print(counting(String))
