@@ -1,11 +1,9 @@
 import random
-n = int(input("give your number:\n "))
-x = True
-while x == True:
-    
-    if n == random.randint(1,6):
-        print("Yes! woooow you did it !!! you rock")
-        break
-        
-    else:
-        int(input("give your number:\n "))
+again = "yes"
+while again == "yes" or again == "y":
+
+    print ("Rolling the dices...")
+    print ("The values are....")
+    print (random.randint(1, 6))
+    print (random.randint(1, 6))
+    again = input("Roll the dices again(y/n)?\n")
