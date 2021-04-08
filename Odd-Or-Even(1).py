@@ -1,8 +1,9 @@
-def odd_or_even():
+def OddOrEven():
     n = int(input("What number are you thinking? "))
-    if n % 2 ==0 :
-        print("That's an even number!", "Have another? ")
+    
+    if n % 2 == 0 :
+        print("That's an even number!")
     else:
-        print("That's an odd number!", "Have another? ")
+        print("That's an odd number!")
         
-print(odd_or_even())
+print(OddOrEven())
