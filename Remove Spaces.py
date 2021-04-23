@@ -1,6 +1,7 @@
-def remove_spaces(str1):
-    str1 = str1.replace(' ', '')
-    return str1
+def remove_spaces(OurString):
+    
+    OurString = OurString.replace(' ', '')
+    return OurString
 
 print(remove_spaces("Farshad Rahimi Ghashghaei"))
 print(remove_spaces("p y t h o n"))
