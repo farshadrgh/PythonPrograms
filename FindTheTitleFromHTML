@@ -1,165 +1,116 @@
 from bs4 import BeautifulSoup
-
+# You can enter your HTML document here!
 html_doc = """
-
-
 <!DOCTYPE html>
-<html lang="en" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
-  <head>
-    <meta charset="utf-8">
-  <link rel="dns-prefetch" href="https://github.githubassets.com">
-  <link rel="dns-prefetch" href="https://avatars.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
-  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+<html lang="en">
+ <head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Breaking News English.com - Mini Lessons. Comes with more reading, activities, quizzes and a listening.">
+  <title>Breaking News English | 2-Page Mini Lessons</title>
+
+  <meta name="keywords" content="ESL online activity, Mini Lessons, Breaking News English, Online Activities">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style-mbd.css" type="text/css" media="all">
+  
+
+
+  <!-- meta tag for Facebook Insights -->
+  <meta property="fb:admins" content="BreakingNewsEnglish" />        
+                
+  <meta property="og:title" content="Breaking News English - Mini Lessons" />
+  <meta property="og:description" content="English News Lessons in 7 levels with graded multi-level listening and variable scrolled-reading, and all-skills activities." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://www.breakingnewsenglish.com/mini_lessons.html" />
+  <meta property="og:image" content="http://www.breakingnewsenglish.com/images/fb-og.jpg" />
+  <meta property="og:site_name" content="www.breakingnewsenglish.com" />
+
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body class="page page-help right-sidebar">
+
+<div id="masthead" class="section site-header">
+  <div class="container">
+    <div id="branding" class="content-container match-height">
+
+        <h1 class="site-title"><a href="/" title="Thousands of free news english lessons - 7 levels, 27-Page handouts, 2-page mini-lessons, speed reading, 5-speed listening, mp3s &amp; 30+ online activities. Easier / Harder lessons every 2 days. English news lessons cover current events / current affairs topics on World News, Business News, Entertainment, Technology, Science...">Breaking News English</a></h1>
+        
+<h6><a href="index.html">Home</a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;<a href="help.html">Help This Site</a></h6>
+</div><!-- #branding -->
+
+    <div id="ideas-activities-ebook" class="content-container match-height">
+      <h3 class="h5"><a title="New ideas and printable handouts that save you time - for news English and current affairs / current events lessons." href="book.html"><span>1,000 Ideas e-Book</span></a></h3>
+    </div><!-- #ideas-activities-ebook -->
+
+    <div id="more-free-lessons" class="content-container match-height">
+      <h3 class="h5"><a href="http://www.freeeslmaterials.com/sean_banville_lessons.html" title="Thousands of news English lessons with printable handouts, MP3 listening, online quizzes and more. ESL / EFL lesson plans based on current events / current affairs." target="_blank"><span>Free English Lesson Websites</span></a></h3>
+    </div><!-- #more-free-lessons -->
+
+  </div><!-- .container -->
+</div><!-- header .section -->
 
 
 
-  <link crossorigin="anonymous" media="all" integrity="sha512-7KjiGvJiLLy6LJPGf3m67ejAdgQsgDdnxZYoaI6+Agd0ZxHKTCjoKZgaf3PgUjURCcVceAwySJJJWgitRskDiA==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-eca8e21af2622cbcba2c93c67f79baed.css" />
-    <link crossorigin="anonymous" media="all" integrity="sha512-ZS0ILXChK0v6MFarr5VP2Qq916nqPSByfcud8IEvgXav8xbAAafFHX22IuZOi5/ZkKbLgOmqFkezGZVyANnFrQ==" rel="stylesheet" href="https://github.githubassets.com/assets/behaviors-652d082d70a12b4bfa3056abaf954fd9.css" />
+&nbsp;
+
+<div class="advert section">
+  <div class="container">
+    <div class="content-container">
+      <!-- Google Ad -->
+      
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- r-activities -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7356791340648458"
+     data-ad-slot="9132895073"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div><!-- .content-container -->    
+  </div><!-- .container -->
+</div><!-- .section -->
+
+<div id="main" class="section">
+  <div class="container section-header">
+    <div class="content-container">
+     <header>
+       <h3>2-Page Mini  Lessons</h3></header>
+    </div><!-- .content-container -->
+  </div><!-- .container -->
+
+  <div class="container">
     
-    
-    
-    <link crossorigin="anonymous" media="all" integrity="sha512-ec37dkdwRxMnZ+C8WVJL5fX0MDw39MbZDqmjBB3JFemYXHZrq3E3F25pcbYUEmuB29eH0L5f+KOgO+FQNEFTgw==" rel="stylesheet" href="https://github.githubassets.com/assets/github-79cdfb76477047132767e0bc59524be5.css" />
-
-  <script crossorigin="anonymous" defer="defer" integrity="sha512-CzeY4A6TiG4fGZSWZU8FxmzFFmcQFoPpArF0hkH0/J/S7UL4eed/LKEXMQXfTwiG5yEJBI+9BdKG8KQJNbhcIQ==" type="application/javascript" src="https://github.githubassets.com/assets/environment-0b3798e0.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-ahOZvzpz/+SYFONmTAqBCwF04p4zvYweAHl7o69sVAwf0oxqMEyVZa//FnA859IbgU9lzj55LagjePKStkjwpw==" type="application/javascript" src="https://github.githubassets.com/assets/chunk-frameworks-6a1399bf.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-+1BN8W3XvQeL2HiktoDjb/NDm2W8tp9hDUb+NL4vabH/tvhdLZIdE9tYL3xRh6HDsc7JpvlTmu2m7CllRB+QYA==" type="application/javascript" src="https://github.githubassets.com/assets/chunk-vendor-fb504df1.js"></script>
-  
-  <script crossorigin="anonymous" defer="defer" integrity="sha512-HdN9wL816nmT1eI4oHE0w/OlqibUShYhoSQOg7jXRAnvoTDhsaLyludbOMoRvKFzN1vkhe+TxQTEplKkZSlSiw==" type="application/javascript" src="https://github.githubassets.com/assets/behaviors-1dd37dc0.js"></script>
-  
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-tjuNQcwhEIXGvVIG4XM/Aj4z+Od+NBRkbgWNwEMjGL3nsnAmdoBdbzsn/WTvl3hk+TPt1D0BvBLHLBPgiwvT2w==" type="application/javascript" data-module-id="./chunk-animate-on-scroll.js" data-src="https://github.githubassets.com/assets/chunk-animate-on-scroll-b63b8d41.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-+BKEtK9JkmJ52jKSoX6+SBrGV6kJxB8J/iAPkFQ/oeq8YekNcz7IZlJgM5Tddyx1RrkL3+sdG0tAy3YuFbYqfA==" type="application/javascript" data-module-id="./chunk-codemirror.js" data-src="https://github.githubassets.com/assets/chunk-codemirror-f81284b4.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-EKOvqJ9uTatAt87WxU+OSS4mi7gMUszFbGo4aPErQkjpWLXnrPSeZvK5ngU8OYoIoiVOq+v8dA3C6MF/z2d/kA==" type="application/javascript" data-module-id="./chunk-color-modes.js" data-src="https://github.githubassets.com/assets/chunk-color-modes-10a3afa8.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-zkYZSjUFqSifB+Lt76jclFMrfqpcPqevT801RZcoBNCZHRTBKcFrW9OyJoPOzKFv+fZVDRnqdqGsuIv5KOIgZg==" type="application/javascript" data-module-id="./chunk-contributions-spider-graph.js" data-src="https://github.githubassets.com/assets/chunk-contributions-spider-graph-ce46194a.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-6j/oSF+kbW+yetNPvI684VzAu9pzug6Vj2h+3u1LdCuRhR4jnuiHZfeQKls3nxcT/S3H+oIt7FtigE/aeoj+gg==" type="application/javascript" data-module-id="./chunk-drag-drop.js" data-src="https://github.githubassets.com/assets/chunk-drag-drop-ea3fe848.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-N+ziqJjVMfWiqeVHdayDHpNRlG5HsF+cgV+pFnMDoTJuvBzgw+ndsepe4NcKAxIS3WMvzMaQcYmd2vrIaoAJVg==" type="application/javascript" data-module-id="./chunk-edit.js" data-src="https://github.githubassets.com/assets/chunk-edit-37ece2a8.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-aiqMIGGZGo8AQMjcoImKPMTsZVVRl6htCSY7BpRmpGPG/AF+Wq+P/Oj/dthWQOIk9cCNMPEas7O2zAR6oqn0tA==" type="application/javascript" data-module-id="./chunk-emoji-picker-element.js" data-src="https://github.githubassets.com/assets/chunk-emoji-picker-element-6a2a8c20.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-G3/1Wo8nza2llJz848q++KJXUpeUuHcSDvXLcJzqQZDBLXm/PaOchsesQlyxX/3bXdasUpOE217R8Ln6vTqMHA==" type="application/javascript" data-module-id="./chunk-filter-input.js" data-src="https://github.githubassets.com/assets/chunk-filter-input-1b7ff55a.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-XwuQdORq1W9Z+a/i72pH+NfR1rhwlGdxIlaIBbTciscGc/+McxMNLixGBp8e6Td4W1zzHvQ1Jyryl5gUfEr76g==" type="application/javascript" data-module-id="./chunk-insights-graph.js" data-src="https://github.githubassets.com/assets/chunk-insights-graph-5f0b9074.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-cdGVmQXhZYV6/Qj5QsArM/LjCG6qatgnsAE6W5y9UOHI+J2NdRU7l3IPlxh1zKNwgt5FWXnvrpyEIL7pc3aihg==" type="application/javascript" data-module-id="./chunk-jump-to.js" data-src="https://github.githubassets.com/assets/chunk-jump-to-71d19599.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-supZkxo+OPYLNtLXxI+e1dkCqVySu4FOWX1fiVVFs2ZggygppNsEz4F9wVp4YtH2TjFsZW8r/75uDUhPneO2sA==" type="application/javascript" data-module-id="./chunk-notification-list-focus.js" data-src="https://github.githubassets.com/assets/chunk-notification-list-focus-b2ea5993.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-ma0OOy3nj0c1cqBx0BkcmIFsLqcSZ+MIukQxyEFM/OWTzZpG+QMgOoWPAHZz43M6fyjAUG1jH6c/6LPiiKPCyw==" type="application/javascript" data-module-id="./chunk-profile-pins-element.js" data-src="https://github.githubassets.com/assets/chunk-profile-pins-element-99ad0e3b.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-zh+tYYvd4W00us1O4PkhmKsl/CzInIyrdoMqV2xqC7XPu06UEHfEMJfOiwidJ5f80SwrdGWogWFuJzLHwRbRgA==" type="application/javascript" data-module-id="./chunk-ref-selector.js" data-src="https://github.githubassets.com/assets/chunk-ref-selector-ce1fad61.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-Zii9oRdZ6q2QDNjL5A+me7jwJjMLvs1NiQNHmajUZnn4t9shcBDb4F8l/PQZW26eYfe5065oM7lIOSmbMinA7Q==" type="application/javascript" data-module-id="./chunk-responsive-underlinenav.js" data-src="https://github.githubassets.com/assets/chunk-responsive-underlinenav-6628bda1.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-9WNXtB07IyWypiPmkuucspwog4mme9q5GKGMSgd7FI0DPimmg/pEw+aaAofFV1vuWMt9I8H5QpsVtlbHGg1YBA==" type="application/javascript" data-module-id="./chunk-runner-groups.js" data-src="https://github.githubassets.com/assets/chunk-runner-groups-f56357b4.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-fIq9Mn7jY/bHQXnsmh+VejpDnaO+d/FDxsp+4CuZtdNLrLuO+dQCjh+m6Yd8GCYD2Cy6DWbCEyM+mH2dkB2H9A==" type="application/javascript" data-module-id="./chunk-sortable-behavior.js" data-src="https://github.githubassets.com/assets/chunk-sortable-behavior-7c8abd32.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-WK8VXw3lfUQ/VRW0zlgKPhcMUqH0uTnB/KzePUPdZhCm/HpxfXXHKTGvj5C0Oex7+zbIM2ECzULbtTCT4ug3yg==" type="application/javascript" data-module-id="./chunk-toast.js" data-src="https://github.githubassets.com/assets/chunk-toast-58af155f.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-vgHJEmEJxNmHucGbVY8bEUoOYo5/ZwpQ69rU8Dld89daWJ54uad9lNptxq32F8pnbHhdngw9lohNEbMbjmj5AQ==" type="application/javascript" data-module-id="./chunk-tweetsodium.js" data-src="https://github.githubassets.com/assets/chunk-tweetsodium-be01c912.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-aSxfTHAZj9wv7n08DxgAKkNg7jhiTo4yKKbDqLGxcDxUk/al571Y2ZSsOmLJ0Vh8cuAL8tW+JgX1t0JeKfyfaA==" type="application/javascript" data-module-id="./chunk-user-status-submit.js" data-src="https://github.githubassets.com/assets/chunk-user-status-submit-692c5f4c.js"></script>
-    <script crossorigin="anonymous" defer="defer" integrity="sha512-FTzn67VUikEWGXoKpUjZgeuNXoI9NQXyuzSfVmtG0gFTy7QZykAwRn4RSvGXc/CPyWYkdiDNlbc0vtP9jfG61w==" type="application/javascript" src="https://github.githubassets.com/assets/dashboard-153ce7eb.js"></script>
-
-  
-
-  <meta name="viewport" content="width=device-width">
-  
-  <title>GitHub</title>
-    <meta name="description" content="GitHub is where people build software. More than 56 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
-  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
-  <meta property="fb:app_id" content="1401488693436528">
-  <meta name="apple-itunes-app" content="app-id=1477376905" />
-    <meta property="og:url" content="https://github.com">
-    <meta property="og:site_name" content="GitHub">
-    <meta property="og:title" content="Build software better, together">
-    <meta property="og:description" content="GitHub is where people build software. More than 56 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
-    <meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-logo.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="1200">
-    <meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-mark.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="620">
-    <meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-octocat.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="620">
-
-    <meta property="twitter:site" content="github">
-    <meta property="twitter:site:id" content="13334762">
-    <meta property="twitter:creator" content="github">
-    <meta property="twitter:creator:id" content="13334762">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="GitHub">
-    <meta property="twitter:description" content="GitHub is where people build software. More than 56 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
-    <meta property="twitter:image:src" content="https://github.githubassets.com/images/modules/open_graph/github-logo.png">
-    <meta property="twitter:image:width" content="1200">
-    <meta property="twitter:image:height" content="1200">
-
-
-
-    
-
-  <link rel="assets" href="https://github.githubassets.com/">
-    <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/73135303/ws?session=eyJ2IjoiVjMiLCJ1Ijo3MzEzNTMwMywicyI6NjcyMTMzNDczLCJjIjoxODEyNzI4MDUzLCJ0IjoxNjE5Njk4Njc3fQ==--353c7dc9f993055e156d86892334f9fa55d88f848facef8d396fcab149644bf7" data-refresh-url="/_alive" data-session-id="79b34608272dbbdd1923778e9aaf4cb8e1cbb0c742ace27914085a14856a80c5">
-    <link rel="shared-web-socket-src" href="/socket-worker-3f088aa2.js">
-  <link rel="sudo-modal" href="/sessions/sudo_modal">
-
-  <meta name="request-id" content="5F94:3828:5A98B17:5D75997:608AA3CF" data-pjax-transient="true" /><meta name="html-safe-nonce" content="58b32adabd5c1bbd646f468bbd21ced60971af0fe5f9b5da70c1c0c77f3674bf" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6bnVsbCwicmVxdWVzdF9pZCI6IjVGOTQ6MzgyODo1QTk4QjE3OjVENzU5OTc6NjA4QUEzQ0YiLCJ2aXNpdG9yX2lkIjoiNzQyNTk2MTYyNzA0MjU2OTQwOSIsInJlZ2lvbl9lZGdlIjoiZnJhIiwicmVnaW9uX3JlbmRlciI6ImlhZCJ9" data-pjax-transient="true" /><meta name="visitor-hmac" content="050ea1867711c5ca8facad7e0120d342b305c9bb2d2b149977487ac644c3634d" data-pjax-transient="true" />
-
-
-    <meta name="page-subject" content="GitHub">
-
-  <meta name="github-keyboard-shortcuts" content="dashboards" data-pjax-transient="true" />
-
-  
-
-  <meta name="selected-link" value="/" data-pjax-transient>
-
-    <meta name="google-site-verification" content="c1kuD-K2HIVF635lypcsWPoD4kilo5-jA_wBFyT4uMY">
-  <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
-  <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
-  <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
-
-  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-actor-id" content="73135303" /><meta name="octolytics-actor-login" content="farshadrgh" /><meta name="octolytics-actor-hash" content="7736e9401992d5a461335e3faf718f6f93aee5429c071d5c46eaeaa2585260e0" />
-
-  <meta name="analytics-location" content="/dashboard" data-pjax-transient="true" />
-
-  
-
-
-
-
-
-
-  
-
-      <meta name="hostname" content="github.com">
-    <meta name="user-login" content="farshadrgh">
-
-
-      <meta name="expected-hostname" content="github.com">
-
-      <meta name="js-proxy-site-detection-payload" content="Njk2MjY2ZWU4MjBhNDkyZmJjNzY1OTAzZmYwYzY4ZjNmZTBhNGVlZmNhNGUyNGZiZmE3N2Q3YzdkMjgyYWU1M3x7InJlbW90ZV9hZGRyZXNzIjoiNS4xMjcuMjQzLjE1OCIsInJlcXVlc3RfaWQiOiI1Rjk0OjM4Mjg6NUE5OEIxNzo1RDc1OTk3OjYwOEFBM0NGIiwidGltZXN0YW1wIjoxNjE5Njk4Njc3LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
-
-    <meta name="enabled-features" content="MARKETPLACE_PENDING_INSTALLATIONS,AUTOCOMPLETE_EMOJIS_IN_MARKDOWN_EDITOR,GITHUB_TOKEN_PERMISSION,ACTIONS_CONCURRENCY_UI">
-
-  <meta http-equiv="x-pjax-version" content="48692bebf52b02afe08f94676411ebf21e58818307dcc45d253ded05ea2eb555">
-  
-
-      <link rel="alternate" type="application/atom+xml" title="ATOM" href="/farshadrgh.private.atom?token=ARN7JRZPFQGH7VHXUGGNIN56S2CPK" />
-
-
-
-
-
-  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
-
-  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
-
-  <meta name="browser-optimizely-client-errors-url" content="https://api.github.com/_private/browser/optimizely_client/errors">
-
-  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
-  <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
-  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
-
-<meta name="theme-color" content="#1e2327">
-<meta name="color-scheme" content="light dark" />
-
-
-  <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
-
-  </head>
+    <div id="primary" class="content-area match-height">
+        <div class="content-container">       
+          <!-- Sharing -->
+          <div class="sharing">
+            <ul id="social-media-list" class="inline no-bullets">
+              <li id="facebook-like">
+                <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.breakingnewsenglish.com%2Fmini_lessons.html&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35" style="border:none; overflow:hidden; height:35px; display: inline; max-width: 100px;"></iframe>
+              </li><!-- #facebook-like -->
+              <li>
+                <a title="... to a friend, student, colleague..." href="javascript:mailpage()">
+                <strong>E-mail this <br>
+                to a friend</strong> </a>
+              </li>
+              
+              <li>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-count="none"></a>
+              </li>
+              <li>
+                <a href="https://feeds.feedburner.com/breakingnewsenglish" title="Subscribe to my feed" rel="alternate" type="application/rss+xml"><strong>RSS<br>Feed
+                </strong></a>
+              </li>
+            </ul><!-- #social-media-list .no-bullets -->
+          </div>
 """
 soup = BeautifulSoup(html_doc, 'html.parser')
 print("Title of the HTML document:")
