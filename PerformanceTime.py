@@ -8,5 +8,5 @@ def SumOf_n_Numbers(n):
     end_time = time.time()
     return s, end_time-start_time
 
-n = 1000
+n = int(input("What is yout number? "))
 print("\nTime to sum of 1 to ", n ," and required time to calculate is :", SumOf_n_Numbers(n))
