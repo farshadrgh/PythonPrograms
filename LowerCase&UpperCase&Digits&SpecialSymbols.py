@@ -1,7 +1,9 @@
 def findDigitsCharsSymbols(inputString):
+  
   charCount = 0
   digitCount = 0
   symbolCount = 0
+  
   for char in inputString:
     if char.islower() or char.isupper():
       charCount+=1
